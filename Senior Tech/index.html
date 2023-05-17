@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title" onclick="window.location = 'index.html';">Senior Tech</div>
+            <div class="navbar">
+                <div class="search_box">
+                    <input class="search" placeholder="Buscar" spellcheck="false">
+                    <span class="search_icon_box">
+                        <img src="search.svg" class="search_icon">
+                    </span>
+                        
+                </div>
+                <div class="links">
+                    <a class="nav_link t1" onclick="window.location = 'index.html?artigos';">ARTIGOS<div></div></a>
+                    <a class="nav_link t1" onclick="window.location = 'index.html?tutoriais';">TUTORIAIS<div></div></a>
+                    <a class="nav_link t1" onclick="window.location = 'index.html';">VIDEOS<div></div></a>
+                    <a class="nav_link t2" onclick="window.location = 'index.html?quizzes';">QUIZZES</a>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="content">
+            <div class="filter_box">
+                <span class="f1">Filtrar por:</span>
+                <span id="f2" class="f2" onclick="filter_dropdown(this.dataset.state)" data-state="0">
+                    <span id="filter_dropdown"></span>
+                    <img id="dropdown_icon" src="dropdown.svg">
+                </span>
+                <div id="filter_menu" class="filter_menu">
+                    <div class="filter_option" id="mr" onclick="window.location = 'index.html';">Mais Recentes</div>
+                    <div class="filter_option" id="artigos" onclick="window.location = 'index.html?artigos';">Artigos</div>
+                    <div class="filter_option" id="tutoriais" onclick="window.location = 'index.html?tutoriais';">Tutoriais</div>
+                    <div class="filter_option" id="quizzes" onclick="window.location = 'index.html?quizzes';">Quizzes</div>
+                </div>
+            </div>
+            <div class="content_box">
+                <div id="result_box" class="result_box">
+                    <!-- <div class="results" onclick="window.location.href = 'artigo.html?id=31';">
+                        <div class="res_type">
+                            <img src="type.svg">
+                            <span>Artigo</span>
+                        </div>
+                        <div class="res_metadata">
+                            <div class="res_img">
+                                <img src="stock.jpg" class="data_img">
+                            </div>
+                            <div class="res_info">
+                                <div class="res_title">Como Usar o WhatsApp em 7 Passos</div>
+                                <div class="res_chips">
+                                    <a class="chips" href='quiz.html?id=31';>Artigo</a>
+                                    <a class="chips" href='quiz.html?id=31';>Celular</a>
+                                    <a class="chips" href='quiz.html?id=31';>Aplicativos</a>
+                                    <a class="chips" href='quiz.html?id=31';>WhatsApp</a>
+                                </div>
+                                <span class="res_datetime">03/04/2023 · 21:45</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results">
+                        <div class="res_type">
+                            <img src="type.svg">
+                            <span>Artigo</span>
+                        </div>
+                        
+                        <div class="res_metadata">
+                            <div class="res_img img2">
+                                
+                            </div>
+                            <div class="res_info">
+                                <div class="res_title">Como Usar o WhatsApp em 7 Passos</div>
+                                <div class="res_chips">
+                                    <span class="chips">Artigo</span>
+                                    <span class="chips">Celular</span>
+                                    <span class="chips">Aplicativos</span>
+                                    <span class="chips">WhatsApp</span>
+                                </div>
+                                <span class="res_datetime">03/04/2023 · 21:45</span>
+                            </div>
+                                
+                        </div>
+                    </div>
+
+                    <div class="results">
+                        <div class="res_type">
+                            <img src="type.svg">
+                            <span>Artigo</span>
+                        </div>
+                        
+                        <div class="res_metadata">
+                            <div class="res_img img3">
+                                
+                            </div>
+                            <div class="res_info">
+                                <div class="res_title">Como Usar o WhatsApp em 7 Passos</div>
+                                <div class="res_chips">
+                                    <span class="chips">Artigo</span>
+                                    <span class="chips">Celular</span>
+                                    <span class="chips">Aplicativos</span>
+                                    <span class="chips">WhatsApp</span>
+                                </div>
+                                <span class="res_datetime">03/04/2023 · 21:45</span>
+                            </div>
+                                
+                        </div>
+                    </div> -->
+                </div>
+                <div class="hero_section">
+                    <img src="granny.png">
+                    <div class="hero_shadow"></div>
+                    <span class="newsletter">Junte-se a nossa news letter!</span>
+                    <div class="newsletter_input_box">
+                        <input class="newsletter_inp" placeholder="Seu melhor e-mail...">
+                        <div class="newsletter_confirm">
+                            <img src="send.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+              
+        </div>
+    </div>
+    <script>
+        const filtro = document.getElementById("filter_dropdown");
+        const menu = document.getElementById("filter_menu");
+        const f2 = document.getElementById("f2");
+        const dropdown_icon = document.getElementById("dropdown_icon");
+        
+        
+
+        function filter_dropdown(state){
+            if (state =="0" && f2.dataset.state == "0"){
+                f2.dataset.state = "1";
+                menu.style.padding = "5px";
+                menu.style.height = "auto";
+                dropdown_icon.style.transform = "rotate(180deg)";
+            }
+            else if(state == "1" && f2.dataset.state == "1"){
+                
+                f2.dataset.state = "0";
+                menu.style.padding = "0";
+                menu.style.height = "0";
+                dropdown_icon.style.transform = "rotate(0deg)";
+            }
+        }
+
+        //if (f2.dataset.state = "1"){
+        document.addEventListener('click', function(event) {
+            if(!f2.contains(event.target)){
+                filter_dropdown("1");
+            }
+        });
+        //}
+    </script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

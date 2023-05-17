@@ -1,0 +1,41 @@
+.row{
+    display: flex;
+    margin-bottom: 100px;
+    
+}
+.rowr{
+    justify-content: flex-end;
+}
+.step_box{
+    width: 50%;
+    padding: 30px;
+    background: #292D2F;
+    
+    border-radius: 8px;
+    
+}
+.sbl{
+    box-shadow: -20px 20px 0px #2E3336;
+}
+.sbr{
+    box-shadow: 20px 20px 0px #2E3336;
+    
+}
+.step_title{
+    color: #C5D5EA;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.num{
+    font-size: 45px;
+    margin-right: 20px;
+}
+.step{
+    font-size: 30px;
+}
+.explanation{
+    font-weight: 700;
+    color: #F4F5F6;
+    font-size: 15px;
+    line-height: 10px;
+}
